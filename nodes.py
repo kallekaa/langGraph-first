@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from langgraph.graph import MessageState
+from langgraph.graph import MessagesState
 from langgraph.prebuilt import ToolNode
 
 from react import llm, tools
@@ -11,7 +11,7 @@ You are a helpful AI assistant that helps people with their questions.
 You have access to tools.
 """
 
-def run_agent_reasoning(state: MessageState) -> MessageState:
+def run_agent_reasoning(state: MessagesState) -> MessagesState:
     """Runs the agent reasoning step."""
 
     # if state.messages[-1].content == "stop":
